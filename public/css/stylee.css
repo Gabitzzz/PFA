@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+#about{
+    background-color: #2a2a2e;
+}
+
+h1{
+    color: #fff;
+}
+
+.body{
+	font-family: 'Gothic A1', sans-serif;
+    font-size:16px;
+    overflow-x: hidden !important;
+	}
+
+.row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+
+}
+
+p{
+color:#6c6c6f;
+font-size:1em;
+}
+
+
+/* NAVBAR */
+.navbar-brand  span{
+	color: #ec4135;
+	font-size:25px;font-weight:700;letter-spacing:0.1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar-brand {
+	color: #fff;
+	font-size:25px;
+    font-family: 'Raleway', sans-serif;
+	font-weight:700;
+	letter-spacing:0.1em;
+}
+
+.navbar-nav .nav-item .nav-link{
+	padding: 1.1em 1em!important;
+	font-size: 120%;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.dropdown-item:hover{background-color: black;color:#fff;}
+
+nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
+    -moz-transition: padding-top .3s,padding-bottom .3s;
+    transition: padding-top .3s,padding-bottom .3s;
+    border: none;
+	}
+	
+ .shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: linear-gradient(to bottom, #212529, #2a2a2e);
+    /* linear-gradient(to bottom, rgba(245, 246, 252, 0.01), #2a2a2e), */
+
+/* END OF NAVBAR */
+
+
+/* BANNER */
+}
+.banner{
+ 
+    background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.01), #2a2a2e),
+    url('banner2.jpg');
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+::placeholder{
+    color: white;
+}
+
+.banner-text{
+	padding:200px 0 50px 0;
+	
+}
+
+.banner-heading{
+    font-family: 'Raleway', sans-serif;
+	font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+	color:white;
+}
+
+.banner-sub-heading{
+	font-family: 'Libre Baskerville', serif;
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+	color:#fff;
+}
+
+.btn-banner{
+	padding:5px 20px;
+	border-radius:10px;
+	font-weight:700;
+	line-height:1.5;
+	text-align:center;
+	color:#fff;
+}
+
+.text-intro{
+	width:90%;
+	margin:auto;
+	text-align:center;
+	padding-top:30px;
+}
+
+/* END OF BANNER */
+
+/* CONTACT BUTTON */
+
+
+
+/*  END OF CONTACT BUTTON */
+
+/* SKEWED BOX 1  */
+.skewedBox{
+    background: white;
+    padding: 100px 0 0 0 ;
+    transform: skew(0, -7deg) translateY(-120px);
+}
+
+#about .container{
+    padding-bottom: 15%;
+}
+
+.main{
+    padding: 0 100px;
+    transform: skew(0, 7deg);
+}
+
+.main h1{
+    margin: 0;
+    padding: 20px 0;
+    color: black;
+    
+}
+/* END OF SKEWED BOX 1 */
+
+.rectangle{
+    height: 5000px;
+    width: 100px;
+    background-color: red;
+}
+
+.card{
+    background-color: #ec4135;
+}
+
+
+
+
+.skills{
+    border-top: 50px solid #ec4135;
+    border-bottom: 50px solid #ec4135;
+    padding: 50px 0 50px 0;
+    background-color: #2a2a2e;
+    z-index: -1;
+}
+
+.skills h1{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* mobile view */
+@media (min-width: 500px)
+{
+    .mobile-break
+    {
+        display: none;
+    }
+}
+
+@media (max-width:500px)
+{
+    
+
+  
+
+    .skewedBox{
+    padding: 0;
+    }
+
+    .main{
+        padding: 0;
+    }
+
+    .shrink{
+    background-color: #212529;
+
+    }
+
+    nav#banner.navbar.navbar-expand-md.navbar-dark.fixed-top{
+        background-color: #212529;
+    }
+
+	.navbar-nav{
+		background-color: #212529;
+    	color:#fff;
+		z-index:1;
+        margin-top:5px;
+        text-align: center;
+        }
+        
+	.navbar-nav .nav-item .nav-link{
+	padding: 0! important;
+	font-size: 100%;
+    font-weight: 500;
+    font-size: 30px;
+    }
+
+	.banner-text{
+	padding: 200px 0 50px 0;
+    }
+
+    .banner-heading{
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .banner-sub-heading{
+        font-size: 10px;
+        font-weight: 200;
+        line-height: 10px;
+        margin-bottom: 40px;
+    }
+
+    .skills{
+        padding: 20px 0 20px 0;
+    }
+}
+
+@media (max-width:768px){
+	.banner-text{
+	padding:100px 0 50px 0;
+}
+	.banner-sub-heading{
+	font-size: 23px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+
+
+
+#about{
+    padding-bottom: 200px;
+}
+
+.container > h1{
+    font-size: 20px;
+}
+
+.container > h2{
+    font-size: 15px;
+}
+
+.card-group>.card{
+    margin-top: 200px;
+}
+}
+ 
