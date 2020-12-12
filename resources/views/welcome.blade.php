@@ -72,8 +72,6 @@
         </nav>
         {{-- END OF NAV --}}
 
-        
-        
         {{-- START OF BANNER --}}
         <div class="banner">
             <div class="container">
@@ -90,7 +88,9 @@
                 </div>
                 
                 <div class="text-box">
-                  <a href="#" class="btn btn-white btn-animate">Contacteaza-ma!</a>
+                  <a href="#contact" class="btn btn-white btn-animate button-glow">Contacteaza-ma!</a>
+                  {{-- <button type="button" class="btn btn-lg btn-link button-glow">Link (no border or background)</button> --}}
+                  {{-- <button type="button" class="btn btn-lg btn-default button-glow">Default</button> --}}
                 </div>
               
               </div>
@@ -120,8 +120,8 @@
             {{-- SERVICII --}}
               <div class="services-section">
                 <div class="inner-width">
-                  <h1 class="section-title" style="color:#2a2a2e">Servicii</h1>
-                  <div class="border"></div>
+                  {{-- <h1 class="section-title" style="color:#2a2a2e">Servicii</h1>
+                  <div class="border"></div> --}}
                   <div class="services-container">
           
                     <div class="service-box">
@@ -201,78 +201,76 @@
         {{-- TEHNOLOGII FOLOSITE --}}
         <section class="skills">
 
-
-        <div class="row">
-          
-            <div class="col-12 col-md-4 offset-md-4">
-              <h1 class="heading-secondary--main text-center">
-                Tehnologii folosite
-              </h1>
+          <div class="row">
+              <div class="col-12 col-md-4 offset-md-4">
+                <h1 class="heading-secondary--main text-center">
+                  Tehnologii folosite
+                </h1>
+              </div>
+          </div>
+            
+          <div class="row">
+            <div class="col-4 col-md-1 offset-md-3" style="padding-top: 20px;">
+              <img src="{{ asset('css/html.png')}}" class="img-fluid" >
             </div>
-        </div>
-          
-        <div class="row">
-          <div class="col-4 col-md-1 offset-md-3" style="padding-top: 20px;">
-            <img src="{{ asset('css/html.png')}}" class="img-fluid" >
+
+            <div class="col-4 col-md-1 "  style="padding-top: 20px;">
+              <img src="{{ asset('css/css4.png')}}" class="img-fluid">
+            </div>
+
+            <div class="col-4 col-md-1 "  style="padding-top: 20px;">
+              <img src="https://robertthedude.com/images/javascript_logo.png" class="img-fluid" />
+            </div>
+
+            <div class="col-4 col-md-1"  style="padding-top: 20px;">
+              <img src="{{ asset('css/wp.png')}}" class="img-fluid">
+            </div>
+
+            <div class="col-4 col-md-1 "  style="padding-top: 20px;">
+              <img src="{{ asset('css/laravel.png')}}" class="img-fluid" >
+            </div>
+
+            <div class="col-4 col-md-1 "  style="padding-top: 20px;">
+              <img src="{{ asset('css/bootstrap.png')}}" class="img-fluid" >
+            </div>
           </div>
 
-          <div class="col-4 col-md-1 "  style="padding-top: 20px;">
-            <img src="{{ asset('css/css4.png')}}" class="img-fluid">
-          </div>
-
-          <div class="col-4 col-md-1 "  style="padding-top: 20px;">
-             <img src="https://robertthedude.com/images/javascript_logo.png" class="img-fluid" />
-          </div>
-
-          <div class="col-4 col-md-1"  style="padding-top: 20px;">
-            <img src="{{ asset('css/wp.png')}}" class="img-fluid">
-          </div>
-
-          <div class="col-4 col-md-1 "  style="padding-top: 20px;">
-            <img src="{{ asset('css/laravel.png')}}" class="img-fluid" >
-          </div>
-
-          <div class="col-4 col-md-1 "  style="padding-top: 20px;">
-            <img src="{{ asset('css/bootstrap.png')}}" class="img-fluid" >
-          </div>
-          
         </section>
         {{-- END OF TEHNOLOGII FOLOSITE --}}
-  
-        <section id="contact">
-          <div class="contact-container">
-            <div class="contact-box">
-              <div class="right">
-                <h2>Contacteaza-ma!</h2>
-                <input type="text" class="field" placeholder="Nume">
-                <input type="text" class="field" placeholder="Email">
-                <textarea placeholder="Mesaj" class="field"></textarea>
-                <button class="btn">Trimite!</button>
-              </div>
-            </div>
-          </div>
-        
-            
 
-        
+        {{-- CONTACT --}}
+        <section id="contact">
+   
+          {{-- CONTACT FORM --}}
+          @include('contact-us')
+          {{-- END OF CONTACT FORM --}}
 
 
           {{-- GOOGLE MAPS --}}
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11391.198409308774!2d26.32904909256187!3d44.457780281449864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fab235149e5b%3A0xba03748db8451a74!2zQnLEg25lyJl0aQ!5e0!3m2!1sen!2sro!4v1607551937635!5m2!1sen!2sro" 
-                  width="100%" 
-                  height="450" 
-                  frameborder="0" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  aria-hidden="false" 
-                  tabindex="0">
-          </iframe>
+          <div style="border-top: 50px solid #ec4135;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11391.198409308774!2d26.32904909256187!3d44.457780281449864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fab235149e5b%3A0xba03748db8451a74!2zQnLEg25lyJl0aQ!5e0!3m2!1sen!2sro!4v1607551937635!5m2!1sen!2sro" 
+            width="100%" 
+            height="450" 
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen="" 
+            aria-hidden="false" 
+            tabindex="0">
+            </iframe>
+          </div>
           {{-- END OF GOOGLE MAPS --}}
 
         </section>
+        {{-- END OF CONTACT --}}
          
 
      
+        <script>
+          // HIDE NAVBAR AFTER CLICK
+          $('.navbar-nav>li>a').on('click', function(){
+             $('.navbar-collapse').collapse('hide');
+          });
+        </script>
 
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
