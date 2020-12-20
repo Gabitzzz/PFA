@@ -10,4 +10,9 @@
 		}
 	});
 
-	
+  // HIDE NAVBAR AFTER CLICK
+  $('.navbar-nav>li>a').on('click', function(){
+     $('.navbar-collapse').collapse('hide');
+  });
+
+  

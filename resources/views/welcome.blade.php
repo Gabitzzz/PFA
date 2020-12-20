@@ -13,7 +13,6 @@
 
         {{-- Bootstrap --}}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   
         {{-- CSS --}}
         <link href="{{ asset('css/stylee.css') }}" rel="stylesheet" type="text/css" >
@@ -36,41 +35,7 @@
     
     <body>
    
-      {{-- START OF NAV --}}
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
-            <div class="container">
-              <!-- Brand -->
-              <a class="navbar-brand" href="#"><span>Lițcan</span> Gabriel PFA</a>
-            
-              <!-- Toggler/collapsibe Button -->
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <!-- Navbar links -->
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Acasa</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#servicii">Servicii</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link" 
-                        href="#">Despre mine</a>
-                  </li> 
-                </ul>
-              </div>
-            </div>
-        </nav>
-        {{-- END OF NAV --}}
+    @include('navbar')
 
         {{-- START OF BANNER --}}
         <div class="banner">
@@ -89,8 +54,6 @@
                 
                 <div class="text-box">
                   <a href="#contact" class="btn btn-white btn-animate button-glow">Contacteaza-ma!</a>
-                  {{-- <button type="button" class="btn btn-lg btn-link button-glow">Link (no border or background)</button> --}}
-                  {{-- <button type="button" class="btn btn-lg btn-default button-glow">Default</button> --}}
                 </div>
               
               </div>
@@ -98,7 +61,7 @@
         </div>
         
        
-        <section id="about">
+        <section id="home">
           <div class="container">
               <h1 class="mb-0" style="text-align: center;">
                   Web Design & Development.
@@ -108,92 +71,22 @@
                 {{-- Planificare, Dezvoltare si Lansare împreună! --}}
                 Planificare. Dezvoltare. Lansare.<br>
               </h2>
+
+
           </div>
+
         </section>
         {{-- END OF BANNER --}}
+        
 
         {{-- SKEWED BOX --}}
         <section class="skewedBox">
-          <section id="servicii">
-          <div class="main">
 
-            {{-- SERVICII --}}
-              <div class="services-section">
-                <div class="inner-width">
-                  {{-- <h1 class="section-title" style="color:#2a2a2e">Servicii</h1>
-                  <div class="border"></div> --}}
-                  <div class="services-container">
-          
-                    <div class="service-box">
-                      <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                      </div>
-                      <div class="service-title">Web Design & Development</div>
-                      <div class="service-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
-                      </div>
-                    </div>
-          
-                    <div class="service-box">
-                      <div class="service-icon">
-                        <i class="fa fa-server"></i>
-                      </div>
-                      <div class="service-title">Găzduire</div>
-                      <div class="service-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
+          <img src="{{ asset('css/red_line.png')}}" alt="" class="img-fluid line1">
+          <img src="{{ asset('css/gray_line.png')}}" alt="" class="img-fluid line2">
 
-                      </div>
-                    </div>
-          
-                    <div class="service-box">
-                      <div class="service-icon">
-                        <i class="fas fa-wrench"></i>
-                      </div>
-                      <div class="service-title">Mentenanță WEB</div>
-                      <div class="service-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
-                      </div>
-                    </div>
-          
-                    <div class="service-box">
-                      <div class="service-icon">
-                        <i class="fas fa-bolt"></i>
-                      </div>
-                      <div class="service-title">optimizare SEO</div>
-                      <div class="service-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
-                      </div>
-                    </div>
-          
-                    <div class="service-box">
-                      <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                      </div>
-                      <div class="service-title">realizare logo</div>
-                      <div class="service-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
 
-                      </div>
-                    </div>
-          
-                    <div class="service-box">
-                      <div class="service-icon">
-                        <i class="fa fa-bell"></i>
-                      </div>
-                      <div class="service-title">social media</div>
-                      <div class="service-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-              {{-- END OF SERVICII --}}
-          </div>
+        @include('servicii')
 
         </section>
         {{-- END OF SKEWED BOX --}}
@@ -202,40 +95,56 @@
         <section class="skills">
 
           <div class="row">
-              <div class="col-12 col-md-4 offset-md-4">
+              <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-4">
                 <h1 class="heading-secondary--main text-center">
                   Tehnologii folosite
                 </h1>
               </div>
           </div>
             
+
           <div class="row">
+            {{-- HTML LOGO --}}
             <div class="col-4 col-md-1 offset-md-3" style="padding-top: 20px;">
               <img src="{{ asset('css/html.png')}}" class="img-fluid" >
             </div>
 
+            {{-- CSS LOGO --}}
             <div class="col-4 col-md-1 "  style="padding-top: 20px;">
               <img src="{{ asset('css/css4.png')}}" class="img-fluid">
             </div>
 
+            {{-- JS LOGO --}}
             <div class="col-4 col-md-1 "  style="padding-top: 20px;">
               <img src="https://robertthedude.com/images/javascript_logo.png" class="img-fluid" />
             </div>
 
-            <div class="col-4 col-md-1"  style="padding-top: 20px;">
-              <img src="{{ asset('css/wp.png')}}" class="img-fluid">
+             {{-- BOOTSTRAP LOGO --}}
+            <div class="col-4 col-md-1 "  style="padding-top: 20px;">
+              <img src="{{ asset('css/bootstrap.png')}}" class="img-fluid" >
             </div>
-
+         
+              {{-- LARAVEL LOGO --}}
             <div class="col-4 col-md-1 "  style="padding-top: 20px;">
               <img src="{{ asset('css/laravel.png')}}" class="img-fluid" >
             </div>
 
-            <div class="col-4 col-md-1 "  style="padding-top: 20px;">
-              <img src="{{ asset('css/bootstrap.png')}}" class="img-fluid" >
+            {{-- WORDPRESS LOGO --}}
+            <div class="col-4 col-md-1"  style="padding-top: 20px;">
+              <img src="{{ asset('css/wp.png')}}" class="img-fluid">
             </div>
+
+         
+
+           
           </div>
 
+          
+
+
+
         </section>
+
         {{-- END OF TEHNOLOGII FOLOSITE --}}
 
         {{-- CONTACT --}}
@@ -247,36 +156,86 @@
 
 
           {{-- GOOGLE MAPS --}}
-          <div style="border-top: 50px solid #ec4135;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11391.198409308774!2d26.32904909256187!3d44.457780281449864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fab235149e5b%3A0xba03748db8451a74!2zQnLEg25lyJl0aQ!5e0!3m2!1sen!2sro!4v1607551937635!5m2!1sen!2sro" 
-            width="100%" 
-            height="450" 
-            frameborder="0" 
-            style="border:0;" 
-            allowfullscreen="" 
-            aria-hidden="false" 
-            tabindex="0">
-            </iframe>
+          <div>
+            <div style="border-top: 50px solid #ec4135; 
+            border-bottom: 50px solid #ec4135;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+            ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11391.198409308774!2d26.32904909256187!3d44.457780281449864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fab235149e5b%3A0xba03748db8451a74!2zQnLEg25lyJl0aQ!5e0!3m2!1sen!2sro!4v1607551937635!5m2!1sen!2sro" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        style="border:0; "
+                        allowfullscreen="" 
+                        aria-hidden="false" 
+                        tabindex="0">
+                </iframe>
+            </div>
           </div>
           {{-- END OF GOOGLE MAPS --}}
 
         </section>
         {{-- END OF CONTACT --}}
+
+
+        
+
+        {{-- ABOUT --}}
+
+       <section id="about">
+
+          <div class="row">
+            <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4 mt-4">
+              <h1 style="text-align:center;">
+                Despre mine  
+              </h1>    
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-4 mt-2">
+              <p style="text-align: center">
+                "If your dreams don't scare you, they are not big enough."
+              </p>
+            </div>
+          </div>
+    
+          <div class="row align-items-center" style="justify-content: center;">
+            <div class="col-md-4 col-lg-3">
+              <img src="{{ asset('css/me.jpeg')}}" alt="" class="img-fluid align-self-center" style="border-radius: 50%;">
+            </div>    
+            
+            <div class="col-md-6 col-lg-4 offset-lg-1" style="margin-top: 2em; text-align:center;">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6IzRDQUY1MDsiIGQ9Ik0yNTYuMDY0LDBoLTAuMTI4bDAsMEMxMTQuNzg0LDAsMCwxMTQuODE2LDAsMjU2YzAsNTYsMTguMDQ4LDEwNy45MDQsNDguNzM2LDE1MC4wNDhsLTMxLjkwNCw5NS4xMDQNCglsOTguNC0zMS40NTZDMTU1LjcxMiw0OTYuNTEyLDIwNCw1MTIsMjU2LjA2NCw1MTJDMzk3LjIxNiw1MTIsNTEyLDM5Ny4xNTIsNTEyLDI1NlMzOTcuMjE2LDAsMjU2LjA2NCwweiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0ZBRkFGQTsiIGQ9Ik00MDUuMDI0LDM2MS41MDRjLTYuMTc2LDE3LjQ0LTMwLjY4OCwzMS45MDQtNTAuMjQsMzYuMTI4Yy0xMy4zNzYsMi44NDgtMzAuODQ4LDUuMTItODkuNjY0LTE5LjI2NA0KCUMxODkuODg4LDM0Ny4yLDE0MS40NCwyNzAuNzUyLDEzNy42NjQsMjY1Ljc5MmMtMy42MTYtNC45Ni0zMC40LTQwLjQ4LTMwLjQtNzcuMjE2czE4LjY1Ni01NC42MjQsMjYuMTc2LTYyLjMwNA0KCWM2LjE3Ni02LjMwNCwxNi4zODQtOS4xODQsMjYuMTc2LTkuMTg0YzMuMTY4LDAsNi4wMTYsMC4xNiw4LjU3NiwwLjI4OGM3LjUyLDAuMzIsMTEuMjk2LDAuNzY4LDE2LjI1NiwxMi42NA0KCWM2LjE3NiwxNC44OCwyMS4yMTYsNTEuNjE2LDIzLjAwOCw1NS4zOTJjMS44MjQsMy43NzYsMy42NDgsOC44OTYsMS4wODgsMTMuODU2Yy0yLjQsNS4xMi00LjUxMiw3LjM5Mi04LjI4OCwxMS43NDQNCgljLTMuNzc2LDQuMzUyLTcuMzYsNy42OC0xMS4xMzYsMTIuMzUyYy0zLjQ1Niw0LjA2NC03LjM2LDguNDE2LTMuMDA4LDE1LjkzNmM0LjM1Miw3LjM2LDE5LjM5MiwzMS45MDQsNDEuNTM2LDUxLjYxNg0KCWMyOC41NzYsMjUuNDQsNTEuNzQ0LDMzLjU2OCw2MC4wMzIsMzcuMDI0YzYuMTc2LDIuNTYsMTMuNTM2LDEuOTUyLDE4LjA0OC0yLjg0OGM1LjcyOC02LjE3NiwxMi44LTE2LjQxNiwyMC0yNi40OTYNCgljNS4xMi03LjIzMiwxMS41ODQtOC4xMjgsMTguMzY4LTUuNTY4YzYuOTEyLDIuNCw0My40ODgsMjAuNDgsNTEuMDA4LDI0LjIyNGM3LjUyLDMuNzc2LDEyLjQ4LDUuNTY4LDE0LjMwNCw4LjczNg0KCUM0MTEuMiwzMjkuMTUyLDQxMS4yLDM0NC4wMzIsNDA1LjAyNCwzNjEuNTA0eiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="img-fluid" style="width: 10%;"/>
+
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMzQjU5OTg7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk4IiByPSI1Ni4wOTgiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTcwLjIwMSw1OC4yOTRoLTEwLjAxdjM2LjY3Mkg0NS4wMjVWNTguMjk0aC03LjIxM1Y0NS40MDZoNy4yMTN2LTguMzQNCgkJYzAtNS45NjQsMi44MzMtMTUuMzAzLDE1LjMwMS0xNS4zMDNMNzEuNTYsMjEuODF2MTIuNTFoLTguMTUxYy0xLjMzNywwLTMuMjE3LDAuNjY4LTMuMjE3LDMuNTEzdjcuNTg1aDExLjMzNEw3MC4yMDEsNTguMjk0eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="img-fluid" style="width: 10%;"/>
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDExMi4xOTYgMTEyLjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTEyLjE5NiAxMTIuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Y2lyY2xlIHN0eWxlPSJmaWxsOiMwMDdBQjk7IiBjeD0iNTYuMDk4IiBjeT0iNTYuMDk3IiByPSI1Ni4wOTgiLz4NCgk8Zz4NCgkJPHBhdGggc3R5bGU9ImZpbGw6I0YxRjJGMjsiIGQ9Ik04OS42MTYsNjAuNjExdjIzLjEyOEg3Ni4yMDdWNjIuMTYxYzAtNS40MTgtMS45MzYtOS4xMTgtNi43OTEtOS4xMTgNCgkJCWMtMy43MDUsMC01LjkwNiwyLjQ5MS02Ljg3OCw0LjkwM2MtMC4zNTMsMC44NjItMC40NDQsMi4wNTktMC40NDQsMy4yNjh2MjIuNTI0SDQ4LjY4NGMwLDAsMC4xOC0zNi41NDYsMC00MC4zMjloMTMuNDExdjUuNzE1DQoJCQljLTAuMDI3LDAuMDQ1LTAuMDY1LDAuMDg5LTAuMDg5LDAuMTMyaDAuMDg5di0wLjEzMmMxLjc4Mi0yLjc0Miw0Ljk2LTYuNjYyLDEyLjA4NS02LjY2Mg0KCQkJQzgzLjAwMiw0Mi40NjIsODkuNjE2LDQ4LjIyNiw4OS42MTYsNjAuNjExTDg5LjYxNiw2MC42MTF6IE0zNC42NTYsMjMuOTY5Yy00LjU4NywwLTcuNTg4LDMuMDExLTcuNTg4LDYuOTY3DQoJCQljMCwzLjg3MiwyLjkxNCw2Ljk3LDcuNDEyLDYuOTdoMC4wODdjNC42NzcsMCw3LjU4NS0zLjA5OCw3LjU4NS02Ljk3QzQyLjA2MywyNi45OCwzOS4yNDQsMjMuOTY5LDM0LjY1NiwyMy45NjlMMzQuNjU2LDIzLjk2OXoNCgkJCSBNMjcuODY1LDgzLjczOUg0MS4yN1Y0My40MDlIMjcuODY1VjgzLjczOXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" class="img-fluid" width="10%;"/>
+
+              <p style="margin-top: 1em;">
+                Numele meu este Litcan Nicolae-Gabriel, studiez Computer Science & Electronic Engineering la University of Essex din Marea Britanie. Sunt absolvent al Liceului Teoretic "Alexandru Ioan Cuza" din Bucuresti, specializarea Matematica-Informatica.
+              </p>
+            </div>
+          </div>    
+
+
          
+       </section>
+        {{-- END OF ABOUT --}}
+         
+        <div class="parallax"></div>
+        
+        @include('footer')
 
      
-        <script>
-          // HIDE NAVBAR AFTER CLICK
-          $('.navbar-nav>li>a').on('click', function(){
-             $('.navbar-collapse').collapse('hide');
-          });
-        </script>
+
+     
 
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
           <script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
           <script type="text/javascript" src="{{ URL::asset('js/typewriter.js') }}"></script>
+
 
     </body>
 </html>

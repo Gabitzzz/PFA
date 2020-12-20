@@ -10,7 +10,7 @@ html{
     overflow-x: hidden !important;
 }
 
-#about{
+#home{
     background-color: #2a2a2e;
 }
 
@@ -101,7 +101,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 .banner-text{
-	padding:200px 0 50px 0;
+	padding:150px 0 50px 0;
 	
 }
 
@@ -160,11 +160,18 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 /* SKEWED BOX 1  */
 .skewedBox{
     background: white;
-    padding: 100px 0 0 0 ;
     transform: skew(0, -7deg) translateY(-120px);
 }
 
-#about .container{
+.skewedBox .line1{
+    padding-bottom: 40px;
+}
+
+.skewedBox .line2{
+    padding-bottom: 60px;
+}
+
+#home .container{
     padding-bottom: 15%;
 }
 
@@ -201,6 +208,47 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     font-family: 'Poppins', sans-serif;
 }
 
+#about{
+    background-color: #2a2a2e;
+    margin-top: 50px;
+    border-top: 50px solid white;
+    padding-bottom: 50px;
+}
+
+#about h1
+{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#about h1:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #ec4135;
+}
+
+.parallax {
+    /* The image used */
+    background-image: 
+    url("cover9.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+    max-height: 900px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 
 /* mobile view */
 @media (min-width: 500px)
@@ -213,12 +261,17 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 
 @media (max-width:500px)
 {
-    
-
-  
 
     .skewedBox{
-    padding: 0;
+       padding: 0;
+    }
+
+    .skewedBox .line1{
+        padding-bottom: 15px;
+    }
+
+    .skewedBox .line2{
+        padding-bottom: 30px;
     }
 
     .main{
@@ -238,9 +291,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
         border: hidden;
     }
 
-    .navbar-collapse{
-        border-top: 1px solid red;
-    }
+   
 
 	.navbar-nav{
 		background-color: #212529;
@@ -258,13 +309,13 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     }
 
 	.banner-text{
-	padding: 200px 0 50px 0;
+	padding: 100px 0 25px 0;
     }
 
     .banner-heading{
         font-size: 30px;
         line-height: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     .banner-sub-heading{
@@ -274,6 +325,18 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
         margin-bottom: 40px;
     }
 
+    #home h1{
+        font-size:25px;
+	font-family: 'Gothic A1', sans-serif;
+
+    }
+
+    #home h2{
+        font-size: 20px;
+    }
+
+  
+
     
     .skills{
         padding: 20px 0 20px 0;
@@ -281,32 +344,58 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 @media (max-width:768px){
+
+
+    .navbar-nav .nav-item .nav-link{
+        font-size: 100%;
+    }
+
 	.banner-text{
 	padding:100px 0 50px 0;
-}
+    }
+
 	.banner-sub-heading{
 	font-size: 23px;
     font-weight: 200;
     line-height: 23px;
     margin-bottom: 40px;
+    }
+
+   .skewedBox .line1{
+       padding-bottom: 20px;
+   }
+
+   .skewedBox .line2{
+    padding-bottom: 30px;
 }
 
+    #home{
+        padding-bottom: 100px;
+    }
 
+    .container > h1{
+        font-size: 20px;
+    }
 
-#about{
-    padding-bottom: 200px;
+    .container > h2{
+        font-size: 15px;
+    }
+
+    .skills{
+        border-top: 30px solid #ec4135;
+        border-bottom: 30px solid #ec4135;
+        padding: 35px 0 35px 0;
+    }
 }
 
-.container > h1{
-    font-size: 20px;
-}
+@media(max-width:1024px)
+{
+    #home .container{
+        padding-bottom: 18%;
+    }
 
-.container > h2{
-    font-size: 15px;
-}
-
-.card-group>.card{
-    margin-top: 200px;
-}
+    .skewedBox .line1{
+        padding-bottom: 25px;
+    }
 }
  
